@@ -2,14 +2,16 @@
 {% load static %}
 {% block menu %}
 <div class="d-flex flex-row-reverse bg-body-tertiary">
+
      <a class="nav-link" href="#">
-           <img src="https://encurtador.com.br/dgrvN " height="28px">
+
+           <img src="{% static 'img/face.jpeg.png' %}" alt="" style="height: 28px; width: 28px;">
      </a>
     <a class="nav-link" href="#">
-           <img src="https://encurtador.com.br/nyzCU" height="28px">
+           <img src="{% static 'img/inst.png' %}" alt="Twitter" style="height: 28px; width: 28px;">
     </a>
     <a class="nav-link" href="#">
-           <img src="https://encurtador.com.br/wKU29" height="28px">
+          <img alt="Instagram" src="{% static 'img/twitter.png' %}" style="height: 28px; width: 28px;" >
     </a>
 
   </div>
@@ -60,8 +62,8 @@
 
 
 {% block footer %}
-<footer style="background-color: #b3d9ff; padding: 20px; color: #000;">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
+<footer style="background-color: #b3d9ff; padding: 30px; color: #000;">
+    <div style="display: flex; justify-content: space-between; align-items: center;font-size: 16px;">
         <div>
              <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
 
@@ -74,11 +76,17 @@
             <p>Acesse nossa Newsletter</p>
             <!-- Inserir código para o formulário de cadastro de e-mail -->
         </div>
-        <div>
-            <!-- Inserir ícones das redes sociais -->
-            <img src="caminho/do/icone-facebook.png" alt="Facebook" style="height: 20px; width: 20px;">
-            <img src="caminho/do/icone-twitter.png" alt="Twitter" style="height: 20px; width: 20px;">
-            <img src="caminho/do/icone-instagram.png" alt="Instagram" style="height: 20px; width: 20px;">
+        <div class="d-flex flex-row-reverse bg-body-tertiary">
+
+            <a class="nav-link" href="#">
+                <img src="{% static 'img/face.jpeg.png' %}" alt="" style="height: 28px; width: 28px;">
+            </a>
+            <a class="nav-link" href="#">
+                <img src="{% static 'img/inst.png' %}" alt="Twitter" style="height: 28px; width: 28px;">
+            </a>
+            <a class="nav-link" href="#">
+                <img alt="Instagram" src="{% static 'img/twitter.png' %}" style="height: 28px; width: 28px;" >
+            </a>
         </div>
     </div>
     <div style="margin-top: 20px;">
