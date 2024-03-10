@@ -1,27 +1,33 @@
-    body {
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            color: black;
-            margin: 0;
-            padding: 0px;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            background-color: #f0f8ff; /* Azul claro */
-        }
+ footer {
+    background-color: #4CAF50;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
 
-    h1{
-            background-color: deeblack;
-        }
+/* Estilo de uma caixa simples */
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
+/* Estilo de um botão */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    .footer{
-            background-color: black;
-            color: white;
-            font-size: 20px;
-            height: 50px;
-            width: 150px;
-            border: 10px solid red;
-        }
-
+.button:hover {
+    background-color: #45a049;
+    color: #fff;
+}
 

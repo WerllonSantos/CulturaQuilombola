@@ -13,7 +13,8 @@ def equipe (request):
 def atividades (request):
     return render(request, 'atividades.html')
 
-
+def voluntario (request):
+    return render(request, 'voluntario.html')
 
 def contato (request):
     return render(request, 'contato.html')
