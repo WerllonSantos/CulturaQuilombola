@@ -1,6 +1,6 @@
 {% extends 'menu.html' %}
 {% load static %}
-{% block title %} Equipe {% endblock %}
+{% block title %} Voluntário {% endblock %}
 {% block body %}
 
 
@@ -14,6 +14,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
 
         label {
@@ -29,6 +30,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+
         }
 
         button {
@@ -38,11 +40,13 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            align-items: flex-start;
         }
 
         button:hover {
             background-color: #45a049;
         }
+
     </style>
 
 
@@ -99,14 +103,14 @@
         <input type="password" id="senha" name="senha" required>
 
 
-        <label for="termosVoluntariado">
-            <input type="checkbox" id="termosVoluntariado" name="termosVoluntariado" required>
+        <label for="termosVoluntariado" class="checkbox-label">
+        <input type="checkbox" id="termosVoluntariado" name="termosVoluntariado" required>
             Concordo com o Termo de Adesão ao Voluntariado
         </label>
 
-        <label for="termosImagem">
-            <input type="checkbox" id="termosImagem" name="termosImagem" required>
-            Concordo com o Termo de Uso de Imagem e Voz
+        <label for="termosImagem" class="checkbox-label">
+        <input type="checkbox" id="termosImagem" name="termosImagem" required>
+         Concordo com o Termo de Uso de Imagem e Voz
         </label>
 
         <button type="submit">Cadastrar</button>

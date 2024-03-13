@@ -1,8 +1,9 @@
- footer {
-    background-color: #4CAF50;
+ .footer {
+    background-color: #b3d9ff;
     padding: 10px;
     text-align: center;
-    color: #fff;
+    color: #000000;
+    justify-content: space-between;
 }
 
 /* Estilo de uma caixa simples */
@@ -12,22 +13,50 @@
     margin-bottom: 20px;
 }
 
-/* Estilo de um botão */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #4CAF50;
-    color: #fff;
-    border: 1px solid #4CAF50;
-    border-radius: 4px;
-    cursor: pointer;
-}
+ .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
 
-.button:hover {
-    background-color: #45a049;
-    color: #fff;
-}
+        .equipe {
+            text-align: center;
+        }
+
+        .equipe img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+
+        .equipe h2 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .equipe p {
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .equipe a{
+            height: 28px;
+            width: 28px;
+            margin-left: 28px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
 
