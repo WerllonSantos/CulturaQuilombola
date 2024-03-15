@@ -1,62 +1,165 @@
- .footer {
-    background-color: #b3d9ff;
-    padding: 10px;
-    text-align: center;
-    color: #000000;
-    justify-content: space-between;
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content-center;
 }
 
-/* Estilo de uma caixa simples */
+.titulo{
+  background-color: #b3d9ff;
+  padding:50px;
+  margin: 10px;
+  border: 30px;
+  font-size:60px;
+  color: black;
+  font-weight: bold;
+  text-align: center;"
+}
+
+.titulo-equipe h1{
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  margin:10px;
+  padding: 20px;
+
+}
+
+.titulo-equipe p{
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin:10px;
+  padding: 20px;
+
+}
+
 .box {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
+  display:block;
+  margin:30px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
- .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-        }
+.box h2{
+  font-size: 26px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
-        .equipe {
-            text-align: center;
-        }
+.box p{
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-align: justify;
+}
 
-        .equipe img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-            align-items: center;
-            justify-content: center;
+.equipe {
+  text-align: center;
+}
+
+.equipe img {
+   width: 100%;
+   max-width: 200px;
+   height: auto;
+   display: flex;
+   margin-bottom: 10px;
+}
+
+.equipe h2 {
+   margin-bottom: 5px;
+   font-size: 18px;
+}
+
+.equipe p {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.equipe a{
+     height: 28px;
+     width: 28px;
+     margin-left: 28px;
+     justify-content: center;
+     align-items: center;
+}
+
+.newsletter-container button {
+     background-color: #4caf50;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+}
+
+.newsletter-container button:hover {
+     background-color: #45a049;
+}
 
 
-        }
+.container-voluntario {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+
+}
+
+.voluntario {
+        max-width: 600px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.voluntario form {
+        display: grid;
+        gap: 10px;
+}
+
+.containe2: {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        display: block;
+        justify-content: center;
+       align-items: center;
 
 
-        .equipe h2 {
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
+}
 
-        .equipe p {
-            margin-bottom: 5px;
-            font-size: 15px;
-        }
+.voluntario .checkbox-label {
+        display: block;
+        margin-bottom: 10px;
+}
 
-        .equipe a{
-            height: 28px;
-            width: 28px;
-            margin-left: 28px;
-            justify-content: center;
-            align-items: center;
+.voluntario button {
+        display: block;
+        margin-top: 20px;
+}
 
-        }
+.box-cadastro  button {
+       background-color: #4caf50;
+       color: #fff;
+       padding: 10px;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       padding:20px;
+}
 
-
-
+.box-cadastro button:hover {
+     background-color: #45a049;
+}
