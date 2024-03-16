@@ -104,53 +104,38 @@
 .newsletter-container button:hover {
      background-color: #45a049;
 }
+.container-voluntario  {
 
-
-.container-voluntario {
-    display: block;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    margin: 0 auto;
 
 }
 
+
 .voluntario {
-        max-width: 600px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 10px ;
+  background-color: #b3d9ff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  max-width: 1200px;
 }
 
 .voluntario form {
         display: grid;
-        gap: 10px;
+        gap: 20px;
+        width: 100%;
 }
 
-.containe2: {
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border-radius: 5px;
-        display: block;
-        justify-content: center;
-       align-items: center;
-
-
-}
-
-.voluntario .checkbox-label {
+.voluntario-acesso .checkbox-label {
         display: block;
         margin-bottom: 10px;
 }
 
-.voluntario button {
-        display: block;
-        margin-top: 20px;
-}
 
-.box-cadastro  button {
+.voluntario-acesso  button {
        background-color: #4caf50;
        color: #fff;
        padding: 10px;
@@ -160,6 +145,59 @@
        padding:20px;
 }
 
-.box-cadastro button:hover {
+.voluntario-acesso button:hover {
      background-color: #45a049;
 }
+
+.voluntario select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.voluntario-acesso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    background-color:#b3d9ff;
+    padding: 20px;
+    max-width: 1200px; /* Ajuste o valor conforme necessário */
+}
+
+
+.titulo-voluntario {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.voluntario-acesso select {
+  width: 100%;
+  max-width: 100%;
+}
+.voluntario-acesso form {
+        display: grid;
+        gap: 20px;
+        width: 100%;
+}
+
+.contact-info-form{
+ background-color:#b3d9ff;
+ font-size: 16px;
+ justify-content: space-between;
+ align-items: center;
+ padding: 30px
+
+ }
+
+.contact-info{
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 30px;
+ }
