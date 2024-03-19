@@ -2,106 +2,93 @@
 {% load static %}
 {% block menu %}
 
-<div class="d-flex flex-row-reverse bg-body-tertiary">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+           <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item"> <a class="nav-link" href="{% url 'pagina' %}">Pagina Inicial</a> </li>
+             <li class="nav-item"> <a class="nav-link" href="{% url 'sobre' %}">Sobre Nós</a> </li>
+             <li class="nav-item"> <a class="nav-link" href="{% url 'equipe' %}">Equipe</a>   </li>
+             <li class="nav-item"> <a class="nav-link" href="{% url 'voluntario' %}">Voluntário</a>  </li>
+             <li class="nav-item"> <a class="nav-link" href="{% url 'contato' %}">Contatos</a>  </li>
+           </ul>
 
-     <a class="nav-link" href="#">
-           <img src="{% static 'img/face.png' %}" alt="" style="height: 28px; width: 28px;margin-left: 10px;">
-     </a>
-    <a class="nav-link" href="#">
-           <img src="{% static 'img/inst.png' %}" alt="Twitter" style="height: 28px; width: 28px;margin-left: 10px;">
-    </a>
-    <a class="nav-link" href="#">
-          <img alt="Instagram" src="{% static 'img/twitter.png' %}" style="height: 28px; width: 28px;margin-left: 10px;" >
-    </a>
+           <form class="d-flex" role="search">
+             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success" type="submit">Search</button>
+           </form>
+        </div>
+     </div>
 
-  </div>
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary" >
-
-  <div class="container-fluid">
-    <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'pagina' %}">Pagina Inicial</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'sobre' %}">Sobre Nós</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'equipe' %}">Equipe</a>
-        </li>
-
-          <li class="nav-item">
-          <a class="nav-link" href="{% url 'voluntario' %}">Voluntário</a>
-        </li>
-
-          <li class="nav-item">
-          <a class="nav-link" href="{% url 'contato' %}">Contatos</a>
-        </li>
-
-      </ul>
-
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-
+     <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+        <div class="d-flex ms-auto">
+              <a class="nav-link" href="#">
+                  <img src="{% static 'img/face.png' %}" alt="" style="height: 28px; width: 28px;margin-left: 10px;">
+              </a>
+              <a class="nav-link" href="#">
+                  <img src="{% static 'img/inst.png' %}" alt="Twitter" style="height: 28px; width: 28px;margin-left: 10px;">
+              </a>
+              <a class="nav-link" href="#">
+                  <img alt="Instagram" src="{% static 'img/twitter.png' %}" style="height: 28px; width: 28px;margin-left: 10px;" >
+              </a>
+        </div>
+          </ul>
+     </div>
+ </nav>
 
 {% endblock %}
 
 
 {% block footer %}
-<footer style="background-color: #b3d9ff;color: #000000; ">
-    <div style="display:flex; font-size: 16px; justify-content: space-between; align-items: center;padding:20px">
-        <div>
-             <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
 
-            <p> Culturaquiombola@hotmail.com<br>
-                Rua Prates,194 - Bom Retiro <br>
-                Ourém - PA, 68640-000</p>
-            <p>(91)3456-7890</p>
+  <div class="footer container row ">
+      <div class="col-md-4">
+          <div class="endereco">
+                <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
+                <p>Culturaquiombola@hotmail.com<br>Rua Prates, 194 - Bom Retiro<br>Ourém - PA, 68640-000</p>
+                <p>(91) 3456-7890</p>
+           </div>
+       </div>
+
+         <div class="col-md-4">
+            <div class="newsletter-container">
+                 <h2>Assine nossa Newsletter</h2>
+                 <p>Receba as últimas notícias e atualizações diretamente na sua caixa de entrada.</p>
+                      <form action="#" method="post">
+                            <label for="Email" class="form-label">Email:</label>
+                            <input type="text" class="form-control" style="cursor: pointer;display: block; margin-bottom: 10px;" id="Email">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                      </form>
+            </div>
+         </div>
+
+                <div class="col-md-4">
+                    <div class="social-links" style="display: flex; justify-content: flex-start;">
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/face.png' %}" alt="facebook">
+                        </a>
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/inst.png' %}" alt="Twitter">
+                        </a>
+                        <a class="nav-link" href="#">
+                            <img src="{% static 'img/twitter.png' %}" alt="instragram">
+                        </a>
+                    </div>
+                </div>
+      </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align: left; padding:20px; color: #000000;">
+                    <p>Política de Privacidade e Cookies</p>
+                </div>
+            </div>
         </div>
-            <div class="newsletter-container" style=" text-align: justify; ">
-            <h2>Assine nossa Newsletter</h2>
-            <p>Receba as últimas notícias e atualizações diretamente na sua caixa de entrada.</p>
-            <form action="#" method="post">
-                 <label for="email">Email:</label>
-                 <input type="email" id="email" name="email" placeholder="Seu endereço de email" required>
-                <button type="submit">Assinar</button>
-            </form>
-        </div>
-
-            <div class="social-links" style="display: flex; justify-content: flex-start; ">
-
-            <a class="nav-link" href="#">
-                <img src="{% static 'img/face.png' %}" alt="facebook" style="  margin-left: 10px;height: 20px; width: 20px; justify-content: flex-start;" >
-            </a>
-            <a class="nav-link" href="#">
-                <img src="{% static 'img/inst.png' %}" alt="Twitter" style="  margin-left: 10px;height: 20px; width: 20px; justify-content: flex-start;">
-            </a>
-            <a class="nav-link" href="#">
-                <img src="{% static 'img/twitter.png' %}" alt="instragram" style=" margin-left: 10px;height: 20px; width: 20px; justify-content: flex-start; " >
-            </a>
-        </div>
-
-
     </div>
 
-    <div style=" text-align: left; padding:20px; color: #000000;">
-        <p >Política de Privacidade e Cookies</p>
-    </div>
-</footer>
 
 
 {% endblock %}

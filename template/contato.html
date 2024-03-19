@@ -4,28 +4,44 @@
 {% block body %}
 
 
-<div class="contact-info" >
-    <h2 class="title">Fale Conosco!</h3>
-    <p class="text"> Para mais informação sobre projetos, parcerias ou oportunidades de trabalho,<br> preencha o formulário
+
+<div class="contact-info d-flex flex-column align-items-center">
+       <h3 class="title">Fale Conosco!</h3>
+       <p class="text"> Para mais informação sobre projetos, parcerias ou oportunidades de trabalho,<br> preencha o formulário
                         ou envie um e-mail para o contato@culturaquilombola.com.br </p>
 
+<div class="contact-info-form "> <span class="circle one"></span> <span class="circle two"></span>
+       <form action="#" onclick="return false;" autocomplete="off">
+
+       <h3 class="title" style=" text-align: center">Contatos</h3>
+       <form action="#" method="post">
+
+<div class="col-md-10">
+       <label for="name" class="form-label">Nome:</label>
+       <input type="text" class="form-control" style="display: block; margin-bottom: 10px;"id="name">
 </div>
 
-
-        <div class="contact-info-form d-flex flex-column align-items-center" >
-            <span class="circle one"></span>
-            <span class="circle two"></span>
-            <form action="#" onclick="return false;" autocomplete="off">
-                <h3 class="title">Contatos</h3>
-                <div class="social-input-containers"> <input type="text" name="nome" class="input" placeholder="Nome" /> </div>
-                <div class="social-input-containers"> <input type="email" name="email" class="input" placeholder="Email" />  </div>
-                <div class="social-input-containers"> <input type="tel" name="telefone" class="input" placeholder="Telefone" />  </div>
-                <div class="social-input-containers textarea"> <textarea name="mensagem" class="input" placeholder="Mensagem"></textarea> </div> <input type="submit" value="Send" class="btn" />
-            </form>
-        </div>
-
+<div class="col-md-10">
+       <label for="Email" class="form-label">Email:</label>
+       <input type="text" class="form-control"style="display: block; margin-bottom: 10px;"id="Email">
 </div>
 
+<div class="col-md-10">
+        <label for="telefone" class="form-label">telefone:</label>
+        <input type="tel" class="form-control" style="display: block;  margin-bottom: 10px; "id="telefone"">
+</div>
+
+<div class="col-md-10">
+    <label for="mensagem" class="form-label">Mensagem:</label>
+    <textarea class="form-control" style="display: block;height: 150px; margin-bottom: 10px;" id="mensagem"></textarea>
+</div>
+
+<div class="col-md-10">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+   </form>
+</div>
+</div>
 
 
 {% endblock %}
