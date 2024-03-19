@@ -46,47 +46,41 @@
 
 {% block footer %}
 
-  <div class="footer container row ">
+  <div class="footer">
       <div class="col-md-4">
-          <div class="endereco">
+           <div class="endereco">
                 <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
                 <p>Culturaquiombola@hotmail.com<br>Rua Prates, 194 - Bom Retiro<br>Ourém - PA, 68640-000</p>
                 <p>(91) 3456-7890</p>
-           </div>
-       </div>
 
-         <div class="col-md-4">
+                 <p>Política de Privacidade e Cookies</p>
+           </div>
+      </div>
+
+      <div class="col-md-4">
             <div class="newsletter-container">
                  <h2>Assine nossa Newsletter</h2>
                  <p>Receba as últimas notícias e atualizações diretamente na sua caixa de entrada.</p>
                       <form action="#" method="post">
                             <label for="Email" class="form-label">Email:</label>
-                            <input type="text" class="form-control" style="cursor: pointer;display: block; margin-bottom: 10px;" id="Email">
+                            <input type="text" class="form-control"  id="Email">
                             <button type="submit" class="btn btn-primary">Enviar</button>
                       </form>
             </div>
-         </div>
-
-                <div class="col-md-4">
-                    <div class="social-links" style="display: flex; justify-content: flex-start;">
-                        <a class="nav-link" href="#">
-                            <img src="{% static 'img/face.png' %}" alt="facebook">
-                        </a>
-                        <a class="nav-link" href="#">
-                            <img src="{% static 'img/inst.png' %}" alt="Twitter">
-                        </a>
-                        <a class="nav-link" href="#">
-                            <img src="{% static 'img/twitter.png' %}" alt="instragram">
-                        </a>
-                    </div>
-                </div>
       </div>
-            <div class="row">
-                <div class="col-md-12" style="text-align: left; padding:20px; color: #000000;">
-                    <p>Política de Privacidade e Cookies</p>
-                </div>
-            </div>
+
+      <div class="col-md-4">
+          <div class="social-links" style="display: flex; justify-content: flex-start; ">
+              <a class="nav-link" href="#">
+                  <img src="{% static 'img/face.png' %}" alt="" style="height: 28px; width: 28px;margin-left: 5px;"> </a>
+              <a class="nav-link" href="#">
+                  <img src="{% static 'img/inst.png' %}" alt="Twitter" style="height: 28px; width: 28px;margin-left: 5px;"> </a>
+              <a class="nav-link" href="#">
+                  <img alt="Instagram" src="{% static 'img/twitter.png' %}" style="height: 28px; width: 28px;margin-left: 5px;" ></a>
         </div>
+      </div>
+
+
     </div>
 
 

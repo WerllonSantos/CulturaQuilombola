@@ -6,32 +6,53 @@
      background-color: #333;
      border-radius: 4px;
 }
-
 .footer {
     background-color: #b3d9ff;
-    padding:20px;
+    color: #000;
+    padding: 20px;
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+
 
 }
-.footer endereco{
-    color: #000000;
-    display:flex;
-    font-size: 16px;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.social-links img {
-            margin-left: 10px;
-            height: 20px;
-            width: 20px;
-            justify-content: flex-start;
-        }
+.endereco {
+  text-align: left;
+  padding: 20px;
+  align-items: center;
+
+}
 
 .newsletter-container {
-            text-align: center;
-            justify-content: space-between;
-             align-items: center;
-        }
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: left;
+
+}
+
+.newsletter-container h2 {
+    text-align: left;
+}
+
+.newsletter-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: left;
+}
+
+.newsletter-container button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
 
 .container {
   max-width: 800px;
@@ -51,7 +72,7 @@
   font-size:60px;
   color: black;
   font-weight: bold;
-  text-align: center;"
+  text-align: center
 }
 
 .titulo-equipe h1{
@@ -134,18 +155,7 @@
      align-items: center;
 }
 
-.newsletter-container button {
-     background-color: #4caf50;
-     color: #fff;
-     padding: 10px 20px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-}
 
-.newsletter-container button:hover {
-     background-color: #45a049;
-}
 .container-voluntario  {
 
     justify-content: center;
