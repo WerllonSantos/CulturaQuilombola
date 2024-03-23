@@ -1,0 +1,31 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block title %} noticias {% endblock %}
+{% block body %}
+
+
+
+    <div class="container">
+        <div class="noticia">
+            <img src="{% static 'img/projeto.jpg'%}" alt="Notícia 1"class="img-fluid">
+            <h2>Projeto de Preservação Cultural no Quilombo</h2>
+            <p> </p>
+            <a href="#">Leia mais</a>
+        </div>
+
+        <div class="noticia">
+            <img src="{% static 'img/sustentavel.jpg'%}" alt="Notícia 2"class="img-fluid">
+            <h2>Iniciativas de Sustentabilidade no Quilombo</h2>
+            <p> </p>
+            <a href="#">Leia mais</a>
+        </div>
+
+        <div class="noticia">
+            <img src="{% static 'img/comunidade.jpeg'%}" alt="Notícia 3"class="img-fluid">
+            <h2>Comemoração do Dia da Consciência Negra no Quilombo</h2>
+            <p> </p>
+            <a href="#">Leia mais</a>
+        </div>
+    </div>
+
+{% endblock %}

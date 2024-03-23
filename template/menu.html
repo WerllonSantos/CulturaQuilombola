@@ -2,20 +2,43 @@
 {% load static %}
 {% block menu %}
 
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <div class="container-fluid">
-           <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-             <li class="nav-item"> <a class="nav-link" href="{% url 'pagina' %}">Pagina Inicial</a> </li>
-             <li class="nav-item"> <a class="nav-link" href="{% url 'sobre' %}">Sobre Nós</a> </li>
-             <li class="nav-item"> <a class="nav-link" href="{% url 'equipe' %}">Equipe</a>   </li>
-             <li class="nav-item"> <a class="nav-link" href="{% url 'voluntario' %}">Voluntário</a>  </li>
-             <li class="nav-item"> <a class="nav-link" href="{% url 'contato' %}">Contatos</a>  </li>
-           </ul>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container Fluid">
+    <a class="navbar-brand" href=""><h1>Cultura Quilombola</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{% url 'pagina' %}">Página Inicial</a></li>
+                    <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSobre" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nós</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownSobre">
+                 <li><a class="dropdown-item" href="{% url 'sobre' %}">Sobre</a></li>
+                 <li><a class="dropdown-item" href="{% url 'equipe' %}">Equipe</a></li>
+              </ul>
+                    </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNoticias" role="button" data-bs-toggle="dropdown" aria-expanded="false">Notícias</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownNoticias">
+                    <li><a class="dropdown-item" href="{% url 'noticias' %}">Notícias</a></li>
+                    <li><a class="dropdown-item" href="{% url 'eventos' %}">Eventos</a></li>
+                </ul>
+                </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVoluntario" role="button" data-bs-toggle="dropdown" aria-expanded="false">Voluntário</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownVoluntario">
+                    <li><a class="dropdown-item" href="{% url 'voluntario' %}">Voluntário</a></li>
+                    <li><a class="dropdown-item" href="{% url 'doar' %}">Doar</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"> <a class="nav-link" href="{% url 'contato' %}">Contatos</a>  </li>
+            </ul>
 
            <form class="d-flex" role="search">
              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
