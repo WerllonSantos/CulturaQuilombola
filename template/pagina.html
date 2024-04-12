@@ -2,5 +2,79 @@
 {% load static %}
 {% block title %}pagina{% endblock %}
 {% block body %}
-<h1>hyztrjrsjytjyhjhjkhgggggjh</h1>
+<div class="titulo">
+    <p > Junte-se ao Quilombo Ouremense</p>
+
+</div>
+
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/agricultura.jpg'%}" class="d-block w-100" alt="Slide 1" style="height: 600px;">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Agricultura no Quilombo</h1>
+            <p class="opacity-75">A terra que plantamos</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/mulheres.jpg'%}" class="d-block w-100" alt="Slide 1" style="height: 600px;">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>De elas para elas</h1>
+            <p>A mulher e sua representatividade no quilombo</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/homem.jpg'%}" class="d-block w-100" alt="Slide 1" style="height: 600px;">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Os homens do Quilombo</h1>
+            <p>A força deles</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Veja nossa Galeria</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<div class="container">
+        <div class="box" >
+            <h2>Notícias do Quilombo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, justo eu tincidunt.</p>
+             <button type="submit" class="btn btn-primary">Cadastre-se</button>
+        </div>
+        <div class="box">
+            <h2>Eventos do Quilombo</h2>
+            <p>Veja os próximos eventos da nossa comunidade. Participe e celebre conosco!</p>
+             <button type="submit" class="btn btn-primary">Cadastre-se</button>
+        </div>
+
+    <div class="box">
+       <h2>Seja Voluntário</h2>
+       <p>Quer contribuir? Junte-se a nós como voluntário e faça a diferença na vida dos quilombolas.</p>
+       <a href="/culturaquilombola/voluntario/"</a>
+       <button type="submit" class="btn btn-primary">Cadastre-se</button>
+    </div>
+
+
+
+</div>
 {% endblock %}

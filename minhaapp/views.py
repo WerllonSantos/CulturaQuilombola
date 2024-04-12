@@ -10,10 +10,17 @@ def sobre (request):
 def equipe (request):
     return render(request, 'equipe.html')
 
-def atividades (request):
-    return render(request, 'atividades.html')
+def noticias (request):
+    return render(request, 'noticias.html')
 
+def eventos (request):
+    return render(request, 'eventos.html')
 
+def voluntario (request):
+    return render(request, 'voluntario.html')
+
+def doar (request):
+    return render(request, 'doar.html')
 
 def contato (request):
     return render(request, 'contato.html')
