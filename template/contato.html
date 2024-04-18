@@ -1,3 +1,5 @@
+
+
 {% extends 'menu.html' %}
 {% load static %}
 {% block title %} Contato {% endblock %}
@@ -5,43 +7,57 @@
 
 
 
-<div class="contact-info d-flex flex-column align-items-center">
-       <h3 class="title">Fale Conosco!</h3>
-       <p class="text"> Para mais informação sobre projetos, parcerias ou oportunidades de trabalho,<br> preencha o formulário
-                        ou envie um e-mail para o contato@culturaquilombola.com.br </p>
+<div class="container-contato">
 
-<div class="contact-info-form "> <span class="circle one"></span> <span class="circle two"></span>
-       <form action="#" onclick="return false;" autocomplete="off">
+    <div class="contato-titulo ">
+       <h2 class="text-center" > Fale Conosco!</h2>
+       <p> Para mais informação sobre projetos, parcerias ou oportunidades de trabalho,<br> preencha o formulário
+                        ou envie um e-mail para o contato@culturaquilombola.com.br</p>
+    </div>
 
-       <h3 class="title" style=" text-align: center">Contatos</h3>
-       <form action="#" method="post">
 
-<div class="col-md-10">
-       <label for="name" class="form-label">Nome:</label>
-       <input type="text" class="form-control" style="display: block; margin-bottom: 10px;"id="name">
-</div>
+    <div id="contato" class="container-contato d-flex flex-column align-items-center">
+    <div class="contato">
+        <form action="#" method="post">
+         <div class="col-md-10">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="name">
+        </div>
 
-<div class="col-md-10">
-       <label for="Email" class="form-label">Email:</label>
-       <input type="text" class="form-control"style="display: block; margin-bottom: 10px;"id="Email">
-</div>
+         <div class="col-md-10">
+        <label for="email" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
 
-<div class="col-md-10">
+       <div class="col-md-10">
         <label for="telefone" class="form-label">telefone:</label>
-        <input type="tel" class="form-control" style="display: block;  margin-bottom: 10px; "id="telefone"">
+        <input type="tel" class="form-control"  id="telefone"">
+        </div>
+
+         <div class="col-md-10">
+        <label for="message" class="form-label">Mensagem (opcional):</label>
+                <textarea id="message" name="message" class="form-control" rows="4"></textarea>
+        </div>
+
+            <div class="col-12">
+                 <button type="submit" class="btn btn-primary">Enviar</button>
+               </div>
+
+       </form>
+
+    </div>
+</div>
 </div>
 
-<div class="col-md-10">
-    <label for="mensagem" class="form-label">Mensagem:</label>
-    <textarea class="form-control" style="display: block;height: 150px; margin-bottom: 10px;" id="mensagem"></textarea>
-</div>
 
-<div class="col-md-10">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-</div>
-   </form>
-</div>
-</div>
+
+
+
+
+
+
+
+
 
 
 {% endblock %}
