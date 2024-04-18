@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import voluntarioForm, doarForm
+from . models import voluntario, doar
 
 # Create your views here.
 
@@ -24,3 +26,9 @@ def doar (request):
 
 def contato (request):
     return render(request, 'contato.html')
+
+
+
+# Create your views here.
+
+
