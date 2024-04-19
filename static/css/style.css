@@ -246,9 +246,9 @@
 
 .voluntario {
      display: flex;
-     margin: 10px ;
+     margin: 20px ;
      background-color: #b3d9ff;
-     padding: 10px;
+     padding: 20px;
      border-radius: 8px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
      width: 50%;
@@ -256,6 +256,12 @@
 }
 
 .voluntario form {
+     display: grid;
+     gap: 20px;
+     width: 100%;
+}
+
+.voluntario-acesso form {
      display: grid;
      gap: 20px;
      width: 100%;
@@ -283,13 +289,13 @@
 
 .voluntario-acesso {
      display: flex;
-     flex-direction: column;
-     align-items: center;
-     margin: 30px auto;
-     background-color:#b3d9ff;
+     margin: 20px ;
+     background-color: #b3d9ff;
      padding: 20px;
-     max-width: 1200px;
      border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     width: 50%;
+     max-width: 1200px;
 }
 
 
@@ -306,14 +312,10 @@
      width: 100%;
      max-width: 100%;
 }
-.voluntario-acesso form {
-     display: grid;
-     gap: 20px;
-     width: 100%;
-}
+
 .doar {
 
-     margin: 10px ;
+     margin: 20px ;
      background-color: #b3d9ff;
      padding: 20px;
      border-radius: 8px;

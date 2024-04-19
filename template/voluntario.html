@@ -4,126 +4,132 @@
 {% block body %}
 
 
-
-<div class="titulo-voluntario ">
+ <div class="titulo-voluntario ">
     <h2 class="text-center" > Cadastro de Voluntário</h2>
     <p> Vamos precisar de alguns de seus dados para realizar o cadastro.</p>
-</div>
-
-
-<div id="voluntariado" class="container-voluntario d-flex flex-column align-items-center">
-    <div class="voluntario">
-
-        <form action="#" method="post">
-        <div class="col-md-10">
-            <label for="name" class="form-label">Nome:</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-
-        <div class="col-md-10">
-        <label for="sobrenome" class="form-label">sobrenome:</label>
-        <input type="text" class="form-control" id="sobrenome">
-        </div>
-
-        <div class="col-md-10">
-        <label for="apelido" class="form-label">Como gostaria de ser chamado:</label>
-        <input type="text" class="form-control" id="apelido">
-        </div>
-
-        <div class="col-md-10">
-        <label for="cpf" class="form-label">CPF:</label>
-        <input type="text" class="form-control" id="CPF">
-        </div>
-
-        <div class="col-md-10">
-        <label for="dataNascimento" class="form-label">Data Nascimento:</label>
-        <input type="date" class="form-control" id="dataNascimento" >
-         </div>
-
-        <div class="col-md-10">
-        <label for="genero" class="form-label">Gênero:</label>
-        <select type="text"  class="form-control" id="genero">
-            <option value="masculino">Masculino</option>
-            <option value="feminino">Feminino</option>
-            <option value="outro">Outro</option>
-        </select>
-        </div>
-
-        <div class="col-md-10">
-        <label for="telefone">Telefone:</label>
-        <input type="tel" class="form-control" id="telefone">
-        </div>
-
-        <div class="col-md-10">
-        <label for="celular"class="form-label">Celular:</label>
-        <input type="tel" class="form-control" id="celular">
-        </div>
-
-        <div class="col-12">
-            <label for="address" class="form-label">Endereço:</label>
-            <input type="text" class="form-control" id="address" placeholder="">
-        </div>
-        <div class="col-md-6">
-            <label for="city" class="form-label">Cidade:</label>
-            <input type="text" class="form-control" id="city">
-        </div>
-        <div class="col-md-4">
-            <label for="state" class="form-label">Estado:</label>
-            <select id="state" class="form-select">
-                <option selected>PA</option>
-                <option>MG</option>
-                <option>SP</option>
-                <option>DF</option>
-                <option>PE</option>
-                <option>MA</option>
-                <option>CE</option>
-                <option>AC</option>
-                <option>PR</option>
-            </select>
-        </div>
-        <div class="col-md-2">
-            <label for="zip" class="form-label">CEP:</label>
-            <input type="text" class="form-control" id="zip">
-        </form>
     </div>
-</div>
 
- <div class="container-voluntario-acesso">
-        <div class="voluntario-acesso d-flex flex-column align-items-center">
+ <div id="voluntariado" class="container-voluntario d-flex flex-column align-items-center">
+            <div class="voluntario">
 
-        <h3> Acesso ao Cadastro:</h3>
-     <form action="#" method="post">
+                <form action="#" method="post">
+                  <div class="col-md-10">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
 
-       <div class="col-md-6">
-            <label for="email" class="form-label">E-mail:</label>
-            <input type="email" class="form-control" id="email">
-        </div>
+                  <div class="col-md-10">
+                    <label for="sobrenome" class="form-label">sobrenome:</label>
+                    <input type="text" class="form-control" id="sobrenome">
+                  </div>
 
-         <div class="col-md-6">
-            <label for="password" class="form-label">Senha:</label>
-            <input type="password" class="form-control" id="password">
-        </div>
+                  <div class="col-md-10">
+                    <label for="apelido" class="form-label">Como gostaria de ser chamado:</label>
+                    <input type="text" class="form-control" id="apelido">
+                  </div>
 
-         <div class="col-md-10">
-        <label for="termosVoluntariado" class="checkbox-label">
-        <input type="checkbox" id="termosVoluntariado" name="termosVoluntariado" required>
-            Concordo com o Termo de Adesão ao Voluntariado
-        </label>
-        </div>
+                  <div class="col-md-10">
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" class="form-control" id="CPF">
+                  </div>
 
-        <div class="col-md-10">
-        <label for="termosImagem" class="checkbox-label">
-        <input type="checkbox" id="termosImagem" name="termosImagem" required>
-         Concordo com o Termo de Uso de Imagem e Voz
-        </label>
-        </div>
+                  <div class="col-md-10">
+                    <label for="dataNascimento" class="form-label">Data Nascimento:</label>
+                    <input type="date" class="form-control" id="dataNascimento" >
+                  </div>
 
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
-        </div>
+                  <div class="col-md-10">
+                    <label for="genero" class="form-label">Gênero:</label>
+                    <select type="text"  class="form-control" id="genero"><option value="masculino">Masculino</option>
+                         <option value="feminino">Feminino</option>
+                         <option value="outro">Outro</option>
+                    </select>
+                  </div>
 
-    </form>
+                  <div class="col-md-10">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" id="telefone">
+                  </div>
 
-</div>
-</div>
+                  <div class="col-md-10">
+                    <label for="celular"class="form-label">Celular:</label>
+                    <input type="tel" class="form-control" id="celular">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="address" class="form-label">Endereço:</label>
+                    <input type="text" class="form-control" id="address" placeholder="">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="city" class="form-label">Cidade:</label>
+                    <input type="text" class="form-control" id="city">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">Estado:</label>
+                        <select id="state" class="form-select">
+                            <option selected>PA</option>
+                            <option>MG</option>
+                            <option>SP</option>
+                            <option>DF</option>
+                            <option>PE</option>
+                            <option>MA</option>
+                            <option>CE</option>
+                            <option>AC</option>
+                            <option>PR</option>
+                        </select>
+                  </div>
+
+                  <div class="col-md-2">
+                    <label for="zip" class="form-label">CEP:</label>
+                    <input type="text" class="form-control" id="zip">
+                  </div>
+
+
+                </form>
+            </div>
+
+
+
+            <div class="voluntario-acesso d-flex flex-column align-items-center">
+
+                     <h3> Acesso ao Cadastro:</h3>
+                <form action="#" method="post">
+
+                    <div class="col-md-6">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                    <div class="col-md-6">
+                    <label for="password" class="form-label">Senha:</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+
+                    <div class="col-md-10">
+                    <label for="termosVoluntariado" class="checkbox-label">
+                    <input type="checkbox" id="termosVoluntariado" name="termosVoluntariado" required>
+                    Concordo com o Termo de Adesão ao Voluntariado
+                    </label>
+                </div>
+
+                    <div class="col-md-10">
+                    <label for="termosImagem" class="checkbox-label">
+                    <input type="checkbox" id="termosImagem" name="termosImagem" required>
+                    Concordo com o Termo de Uso de Imagem e Voz
+                    </label>
+                </div>
+
+                    <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+
+                 </form>
+
+            </div>
+
+     </div>
+
+
 {% endblock %}
