@@ -311,52 +311,42 @@
      gap: 20px;
      width: 100%;
 }
+.doar {
 
-.container-doar {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+     margin: 10px ;
+     background-color: #b3d9ff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+     width: 50%;
 
-.donation-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+}
 
-.form-group {
-            margin-bottom: 20px;
-        }
+.titulo-doar {
+     font-size: 20px;
+     font-family: Arial, sans-serif;
+     text-align: center;
+     margin-bottom: 10px;
+     font-weight: bold;
+     padding: 30px;
+}
 
-.form-label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
+.doar form {
+     display: grid;
+     gap: 20px;
+     width: 100%;
+}
 
-.form-control {
-            width: 100%;
-            padding: 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+.doar button {
+     background-color: #4caf50;
+     color: #fff;
+     padding: 10px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     margin-top: 30px;
 
-.btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-.btn:hover {
-            background-color: #0056b3;
-        }
+}
 
 .contact-info-form{
      display: block;
