@@ -5,27 +5,38 @@
 
 
 
-    <div class="container">
-        <div class="noticia">
-            <img src="{% static 'img/projeto.jpg'%}" alt="Notícia 1"class="img-fluid">
-            <h2>Projeto de Preservação Cultural no Quilombo</h2>
-            <p> </p>
-            <a href="https://www.es.gov.br/Noticia/funcultura-duas-iniciativas-de-valorizacao-de-cultura-quilombola-sao-realizadas-em-monte-alegre">Leia mais</a>
+<div class="container-noticia">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box-noticia">
+              <img src="{% static 'img/projeto.jpg'%}" alt="Notícia 1"class="img-fluid">
+                <h2>Projeto de Preservação Cultural no Quilombo</h2>
+                 <p>  </p>
+                  <a href="https://www.es.gov.br/Noticia/funcultura-duas-iniciativas-de-valorizacao-de-cultura-quilombola-sao-realizadas-em-monte-alegre"></a>
+                  <button type="submit" class="btn btn-primary">Leia mais</button>
+            </div>
+
         </div>
 
-        <div class="noticia">
-            <img src="{% static 'img/sustentavel.jpg'%}" alt="Notícia 2"class="img-fluid">
-            <h2>Iniciativas de Sustentabilidade no Quilombo</h2>
-            <p> </p>
-            <a href="https://www.institutoterroa.org/a-abertura-do-projeto-quilombo-sustentavel-marca-o-inicio-da-concretizacao-dos-sonhos-de-comunidade-em-ubatuba/">Leia mais</a>
-        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box-noticia">
+             <img src="{% static 'img/sustentavel.jpg'%}" alt="Notícia 2"class="img-fluid">
+             <h2>Iniciativas de Sustentabilidade no Quilombo</h2>
+             <p> </p>
+            <a href="https://www.institutoterroa.org/a-abertura-do-projeto-quilombo-sustentavel-marca-o-inicio-da-concretizacao-dos-sonhos-de-comunidade-em-ubatuba/"></a>
+             <button type="submit" class="btn btn-primary">Leia mais</button>
+            </div>
+       </div>
 
-        <div class="noticia">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box-noticia">
             <img src="{% static 'img/comunidade.jpeg'%}" alt="Notícia 3"class="img-fluid">
             <h2>Comemoração do Dia da Consciência Negra no Quilombo</h2>
             <p> </p>
-            <a href="https://staging.crop.ca/ki/comunidade-quilombola-no-rio-de-janeiro.html">Leia mais</a>
-        </div>
+            <a href="https://staging.crop.ca/ki/comunidade-quilombola-no-rio-de-janeiro.html"></a>
+              <button type="submit" class="btn btn-primary">Leia mais</button>
+            </div>
+       </div>
     </div>
-
+</div>
 {% endblock %}

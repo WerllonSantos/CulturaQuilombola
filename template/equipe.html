@@ -3,172 +3,100 @@
 {% block title %} Equipe {% endblock %}
 {% block body %}
 
-<title>Nossa Equipe</title>
-    <style>
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
-        }
+ <div class="equipe-titulo" >
+    <div class="box">
+    <h1>Rosto do Nosso Movimento</h1>
+    <p >Nossa incrível equipe é a força vital por trás do nosso trabalho. <br>
+        Desde a organização de eventos de arrecadação de fundos e comícios<br>
+        ao gerenciamento de novas campanhas, ela nos ajuda a fazer tudo isso.<br>
+        Ela demonstra a importância de se unir para alcançar algo verdadeiramente grande.</p>
+    </div>
 
-        .equipe {
-            text-align: center;
-        }
-
-        .equipe img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-            align-items: center;
-            justify-content: center;
+ </div>
 
 
-        }
-
-
-        .equipe h2 {
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
-
-        .equipe p {
-            margin-bottom: 5px;
-            font-size: 15px;
-        }
-
-        .equipe a{
-            height: 28px;
-            width: 28px;
-            margin-left: 28px;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-
-    </style>
-        <div style="text-align: center; color: black; font-size: 30px; margin:10px; padding: 20px;">
-        <h1>Rosto do Nosso Movimento</h1>
-        <p style="font-size:26px, padding: 10px;" >Nossa incrível equipe é a força vital por trás do nosso trabalho. <br>Desde a organização de eventos de arrecadação de fundos e comícios<br> ao gerenciamento de novas campanhas, ela nos ajuda a fazer tudo isso.<br> Ela demonstra a importância de se unir para alcançar algo verdadeiramente grande.</p>
-
-        </div >
-        <div class="container">
-            <div class="equipe">
-            <img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-idoso-africano_23-2148833055.jpg?t=st=1710345880~exp=1710349480~hmac=e9e651110432e5c6908d350a858a9ddc811c88a9cedd34936822ec3af9c1cc56&w=360" alt="Foto Líder Comunitário">
-            <h2>Líder Comunitário</h2>
-            <p>Carlos Augusto</p>
-
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/face.jpeg.png' %}"  >
-           </a>
-           <a class="nav-link" href="#">
-           <img src="{% static 'img/inst.png' %}" >
-           </a>
-           <a class="nav-link" href="#">
-           <img alt="Instagram" src="{% static 'img/twitter.png' %}"  >
-            </a>
+<div class="container-equipe">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
+                <img src="https://img.freepik.com/fotos-gratis/retrato-de-homem-idoso-africano_23-2148833055.jpg?t=st=1710345880~exp=1710349480~hmac=e9e651110432e5c6908d350a858a9ddc811c88a9cedd34936822ec3af9c1cc56&w=360" alt="Foto Líder Comunitário">
+                <h2>Líder Comunitário</h2>
+                <p>Carlos Augusto</p>
+                <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
             </div>
-            </div>
+        </div>
 
-            <div class="equipe">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
             <img src="https://img.freepik.com/fotos-gratis/homem-de-negocios-jovem-e-atraente_144627-18008.jpg?t=st=1710345750~exp=1710349350~hmac=f72fc2f5f17b83120c67b86d24093f3f505b42f6d24e479f2cfc8f5293937dae&w=360" alt="Foto Coordenador de Agricultura">
             <h2>Coordenador de Agricultura</h2>
             <p>José Maria</p>
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
-
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/face.jpeg.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/inst.png' %}">
-            </a>
-            <a class="nav-link" href="#">
-            <img alt="Instagram" src="{% static 'img/twitter.png' %}" >
-            </a>
-            </div>
+                <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
            </div>
+        </div>
 
-            <div class="equipe">
+         <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
             <img src="https://img.freepik.com/fotos-gratis/retrato-de-mulher-idosa-africana_23-2148833046.jpg?t=st=1710346310~exp=1710349910~hmac=80ba6038a2ae3c22c8c8a90fc1f6176df2a6a7be6dbf858dcd7c1118856dc0b6&w=360" alt="Foto Coordenador de Agricultura">
             <h2>Coordenadora de Educação</h2>
             <p>Silvia Maria</p>
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
-
-           <a class="nav-link" href="#">
-           <img src="{% static 'img/face.jpeg.png' %}" >
-           </a>
-           <a class="nav-link" href="#">
-           <img src="{% static 'img/inst.png' %}">
-           </a>
-           <a class="nav-link" href="#">
-           <img alt="Instagram" src="{% static 'img/twitter.png' %}"  >
-           </a>
+            <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
            </div>
-           </div>
+        </div>
 
-            <div class="equipe">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
             <img src="https://img.freepik.com/fotos-premium/retrato-de-uma-jovem-de-pe-contra-as-plantas_1048944-30170899.jpg?w=360" alt="Foto Coordenador de Agricultura">
             <h2>Coordenadora de Saúde</h2>
             <p>Antônia Livia</p>
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
-
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/face.jpeg.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/inst.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-            <img alt="Instagram" src="{% static 'img/twitter.png' %}" >
-            </a>
-
-  </div>
+            <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
+           </div>
         </div>
 
-           <div class="equipe">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
             <img src="https://img.freepik.com/fotos-gratis/retrato-de-um-homem-de-camisa-vermelha-e-chapeu_23-2148638788.jpg?t=st=1710346091~exp=1710349691~hmac=c1d6ef7585a856ab56582c031dbdba132fb455ea5f58e850ce73ad42458e3706&w=360" alt="Foto Coordenador de Agricultura">
             <h2>Coordenador de Cultura</h2>
             <p>Luiz Otávio</p>
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
 
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/face.jpeg.png' %}">
-            </a>
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/inst.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-           <img alt="Instagram" src="{% static 'img/twitter.png' %}" >
-           </a>
+            <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
            </div>
-           </div>
+        </div>
 
-            <div class="equipe">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="box">
             <img src="https://img.freepik.com/fotos-gratis/homem-sorridente-de-vista-frontal-posando-para-cv_23-2149927614.jpg?t=st=1710302335~exp=1710305935~hmac=e07821ea661d2821879d6b7157d1804b8b839108684d9eb00d6c920a252d5d3d&w=360" alt="Foto Coordenador de Agricultura">
             <h2>Coordenador de Ambiente</h2>
             <p>Erik Monteiro</p>
-            <div class="d-flex flex-row-reverse bg-body-tertiary">
-
-             <a class="nav-link" href="#">
-             <img src="{% static 'img/face.jpeg.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-            <img src="{% static 'img/inst.png' %}" >
-            </a>
-            <a class="nav-link" href="#">
-            <img alt="Instagram" src="{% static 'img/twitter.png' %}" >
-            </a>
-
-  </div>
+         <div class="d-flex justify-content-end">
+                    <a class="nav-link" href="#"><img src="{% static 'img/face.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/inst.png' %}"></a>
+                    <a class="nav-link" href="#"><img src="{% static 'img/twitter.png' %}"></a>
+                </div>
+           </div>
         </div>
 
-
     </div>
+</div>
 
 {% endblock %}
