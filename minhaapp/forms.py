@@ -1,7 +1,7 @@
-from django.forms import ModelForm
-from .models import voluntario,doar
+from django import forms
+from .models import voluntario, doar
 
-class voluntarioForm(ModelForm):
+class voluntarioForm(forms.ModelForm):
     class Meta:
         model = voluntario
         fields = ['nome','sobrenome','Comogostaiadeserchamado',
@@ -9,9 +9,8 @@ class voluntarioForm(ModelForm):
         'estado', 'bairro', 'endereco','telefone','celular',
                   'email']
 
-
-class doarForm(ModelForm):
+class doarForm(forms.ModelForm):
     class Meta:
         model = doar
-        fields = ['nome','valordadoação','mensagemopcional', 'email', ]
+        fields = ['nome','mensagemopcional', 'email','valor_doacao', ]
 

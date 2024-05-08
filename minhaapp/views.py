@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import voluntarioForm, doarForm
-from . models import voluntario, doar
+from .models import voluntario, doar
+
 
 
 # Create your views here.
@@ -59,4 +60,48 @@ def deletevoluntario(request, id):
     voluntario.delete()
     return redirect("readvoluntario")
 
+def createdoar(request):
+    doarForm = doarForm(request.POST or None)
+    if(doarForm.is_valid()):
+        doar = doarForm.save(commit=False)
+        doar.save()
+        return redirect("readdoar")
+    return render(request, 'createdoar.html', {'doarForm':doarForm})
 
+
+def readdoar(request):
+    doar = doar.objects.all()
+    return render(request, 'readdoar.html',
+                  {'doar':doar})
+
+
+def updatedoar(request, id):
+    doar = get_object_or_404(doar, pk=id)
+    doarForm = doarForm(request.POST or None,
+                            instance=doar)
+    if(doarForm.is_valid()):
+        doar = doarForm.save(commit=False)
+        doar.save()
+        return redirect("readdoar")
+    return render(request, 'createdoar.html', {'doarForm':doarForm})
+
+
+
+def deletedoar(request, id):
+    doar = get_object_or_404(doar, pk=id)
+    doar.delete()
+    return redirect("readdoar")
+
+def doar_view(request):
+    if request.method == 'POST':
+        form = doarForm(request.POST)
+        if form.is_valid():
+            # Salvar a doação
+            nova_doacao = form.save()
+            # Incrementar a contagem de doações
+            nova_doacao.contador_doacoes += 1
+            nova_doacao.save()
+            # Outras ações após a doação (redirecionar, exibir mensagem, etc.)
+    else:
+        form = doarForm()
+    return render(request, 'doar.html', {'form': form})
