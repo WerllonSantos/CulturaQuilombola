@@ -286,7 +286,7 @@
 
 .container-voluntario  {
      max-width: 1200px;
-     margin: 20px auto;
+     margin: 20px ;
      padding: 20px;
      background-color: #fff;
      border-radius: 8px;
@@ -365,7 +365,7 @@
 
 .container-doar  {
      max-width: 1200px;
-     margin: 20px auto;
+     margin: 20px;
      padding: 20px;
      background-color: #fff;
      border-radius: 8px;
@@ -414,8 +414,7 @@
     background-color: #b3d9ff;
      display: flex;
      flex-direction: column;
-
-    margin-bottom: 20px;
+      margin-bottom: 20px;
      margin:10px;
      padding: 20px;
      border-radius: 8px;
@@ -430,7 +429,7 @@
 
 .container-contato  {
      max-width: 1200px;
-     margin: 20px auto;
+     margin: 20px;
      padding: 20px;
      background-color: #fff;
      border-radius: 8px;
@@ -458,7 +457,6 @@
      padding: 30px;
 }
 
-
 .box-contato button {
      background-color: #4caf50;
      color: #fff;
@@ -469,4 +467,3 @@
      margin-top: 20px;
 
 }
-

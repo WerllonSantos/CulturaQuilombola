@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nome', models.CharField(max_length=40)),
                 ('email', models.CharField(max_length=40)),
-                ('valordadoação', models.CharField(max_length=40)),
+                ('valor_doação', models.CharField(max_length=40)),
                 ('mensagemopcional', models.CharField(max_length=500)),
             ],
         ),

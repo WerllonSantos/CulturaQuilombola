@@ -1,47 +1,72 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import voluntarioForm, doarForm
-from .models import voluntario, doar
+
+from .forms import voluntarioForm, contatoForm
 
 
-
-# Create your views here.
-def pagina (request):
+def pagina(request):
     return render(request, 'pagina.html')
-def sobre (request):
-    return render(request, 'sobre.html')
 
+def sobre(request):
+    return render(request, 'sobre.html')
 def equipe(request):
     return render(request, 'equipe.html')
 
-def noticias (request):
+def noticias(request):
     return render(request, 'noticias.html')
 
-def eventos (request):
+def eventos(request):
     return render(request, 'eventos.html')
 
-def voluntario (request):
+def voluntario(request):
     return render(request, 'voluntario.html')
 
-def doar (request):
+def doar(request):
     return render(request, 'doar.html')
 
-def contato (request):
+def contato(request):
     return render(request, 'contato.html')
+
 
 def createvoluntario(request):
     voluntarioForm = voluntarioForm(request.POST or None)
     if(voluntarioForm.is_valid()):
         voluntario = voluntarioForm.save(commit=False)
         voluntario.save()
-        return redirect("readvoluntario")
-    return render(request, 'createvoluntario.html', {'voluntarioForm':voluntarioForm})
+        return redirect("voluntario")
+    return render(request, 'voluntario.html', {'voluntarioForm':voluntarioForm})
 
+def createdoar(request):
+    doarForm = doarForm(request.POST or None)
+    if(doarForm.is_valid()):
+        doar = doarForm.save(commit=False)
+        doar.save()
+        return redirect("doar")
+    return render(request, 'doar.html', {'doarForm':doarForm})
 
-def readvoluntario(request):
+def createcontato(request):
+    form_contato = contatoForm(request.POST or None)
+    if form_contato.is_valid():
+        contato_instance = form_contato.save(commit=False)
+        contato_instance.save()
+        return redirect("contato")
+    return render(request, 'contato.html', {'contatoForm': form_contato})
+
+def readvoluntario(request, voluntario=None):
     voluntario = voluntario.objects.all()
-    return render(request, 'readvoluntario.html',
+    return render(request, 'voluntario.html',
                   {'voluntario':voluntario})
 
+
+def readdoar(request):
+    doar = doar.objects.all()
+    return render(request, 'doar.html',
+                  {'doar':doar})
+
+
+def readcontato(request, contato=None):
+    contato = contato.objects.all()
+    return render(request, 'contato.html',
+                  {'contato':contato})
 
 def updatevoluntario(request, id):
     voluntario = get_object_or_404(voluntario, pk=id)
@@ -50,58 +75,42 @@ def updatevoluntario(request, id):
     if(voluntarioForm.is_valid()):
         voluntario = voluntarioForm.save(commit=False)
         voluntario.save()
-        return redirect("readvoluntario")
-    return render(request, 'createvoluntario.html', {'voluntarioForm':voluntarioForm})
-
-
-
-def deletevoluntario(request, id):
-    voluntario = get_object_or_404(voluntario, pk=id)
-    voluntario.delete()
-    return redirect("readvoluntario")
-
-def createdoar(request):
-    doarForm = doarForm(request.POST or None)
-    if(doarForm.is_valid()):
-        doar = doarForm.save(commit=False)
-        doar.save()
-        return redirect("readdoar")
-    return render(request, 'createdoar.html', {'doarForm':doarForm})
-
-
-def readdoar(request):
-    doar = doar.objects.all()
-    return render(request, 'readdoar.html',
-                  {'doar':doar})
+        return redirect("voluntario")
+    return render(request, 'voluntario.html', {'voluntarioForm':voluntarioForm})
 
 
 def updatedoar(request, id):
     doar = get_object_or_404(doar, pk=id)
     doarForm = doarForm(request.POST or None,
-                            instance=doar)
+                                instance=doar)
     if(doarForm.is_valid()):
         doar = doarForm.save(commit=False)
         doar.save()
-        return redirect("readdoar")
-    return render(request, 'createdoar.html', {'doarForm':doarForm})
+        return redirect("doar")
+    return render(request, 'doar.html', {'doarForm':doarForm})
 
+def updatecontato(request, id):
+    contato = get_object_or_404(contato, pk=id)
+    contatoForm = contatoForm(request.POST or None,
+                                instance=contato)
+    if(contatoForm.is_valid()):
+        contato = contatoForm.save(commit=False)
+        contato.save()
+        return redirect("contato")
+    return render(request, 'contato.html', {'contatoForm':contatoForm})
 
+def deletevoluntario(request, id):
+    voluntario = get_object_or_404(voluntario, pk=id)
+    voluntario.delete()
+    return redirect("voluntario")
 
 def deletedoar(request, id):
     doar = get_object_or_404(doar, pk=id)
     doar.delete()
-    return redirect("readdoar")
+    return redirect("doar")
 
-def doar_view(request):
-    if request.method == 'POST':
-        form = doarForm(request.POST)
-        if form.is_valid():
-            # Salvar a doação
-            nova_doacao = form.save()
-            # Incrementar a contagem de doações
-            nova_doacao.contador_doacoes += 1
-            nova_doacao.save()
-            # Outras ações após a doação (redirecionar, exibir mensagem, etc.)
-    else:
-        form = doarForm()
-    return render(request, 'doar.html', {'form': form})
+def deletecontato(request, id):
+    contato = get_object_or_404(contato, pk=id)
+    contato.delete()
+    return redirect("contato")
+
