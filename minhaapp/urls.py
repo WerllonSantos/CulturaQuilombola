@@ -1,16 +1,16 @@
 from django.urls import path, include
 from rest_framework import routers
 from .viewsets import VoluntarioViewSet, DoacaoViewSet, ContatoViewSet
-from minhaapp.views import pagina, sobre, equipe, noticias, eventos, voluntario, Doacao, contato, createvoluntario, \
-    readvoluntario, updatevoluntario, deletevoluntario, createDoacao, readDoacao, updateDoacao, deleteDoacao, readcontato, \
-    createcontato, updatecontato, deletecontato, cadastrar_voluntario
+from .views import pagina, sobre, equipe, noticias, eventos, Voluntario, Doacao, Contato, createVoluntario, \
+    readVoluntario, updateVoluntario, deleteVoluntario, createDoacao, readDoacao, updateDoacao, deleteDoacao, readContato, \
+    createContato, updateContato, deleteContato, cadastrar_Voluntario
 
 
 
 router = routers.DefaultRouter()
-router.register(r'voluntario', VoluntarioViewSet, basename="voluntario")
+router.register(r'Voluntario', VoluntarioViewSet, basename="Voluntario")
 router.register(r'Doacao', DoacaoViewSet, basename="Doacao")
-router.register(r'contato', ContatoViewSet, basename="Contato")
+router.register(r'Contato', ContatoViewSet, basename="Contato")
 
 
 urlpatterns = [
@@ -19,22 +19,22 @@ urlpatterns = [
     path('equipe/', equipe, name='equipe'),
     path('noticias/', noticias, name='noticias'),
     path('eventos/', eventos, name='eventos'),
-    path('voluntario/', voluntario, name='voluntario'),
+    path('Voluntario/', Voluntario, name='Voluntario'),
     path('Doacao/', Doacao, name='Doacao'),
-    path('contato/', contato, name='contato'),
-    path('createvoluntario', createvoluntario, name='createvoluntario'),
+    path('Contato/', Contato, name='Contato'),
+    path('createVoluntario', createVoluntario, name='createVoluntario'),
     path('createDoacao', createDoacao, name='createDoacao'),
-    path('createcontato', createcontato, name='createcontato'),
-    path('readvoluntario', readvoluntario, name='readvoluntario'),
+    path('createContato', createContato, name='createContato'),
+    path('readVoluntario', readVoluntario, name='readVoluntario'),
     path('readDoacao', readDoacao, name='readDoacao'),
-    path('readcontato', readcontato, name='readcontato'),
-    path('updatevoluntario/<int:id>', updatevoluntario, name='updatevoluntario'),
+    path('readContato', readContato, name='readContato'),
+    path('updateVoluntario/<int:id>', updateVoluntario, name='updateVoluntario'),
     path('updateDoacao/<int:id>', updateDoacao, name='updateDoacao'),
-    path('updatecontato/<int:id>', updatecontato, name='updatecontato'),
-    path('deletevoluntario/<int:id>', deletevoluntario, name='deletevoluntario'),
-    path('deletecontato/<int:id>', deletecontato, name='deletecontato'),
+    path('updateContato/<int:id>', updateContato, name='updateContato'),
+    path('deleteVoluntario/<int:id>', deleteVoluntario, name='deleteVoluntario'),
+    path('deleteContato/<int:id>', deleteContato, name='deleteContato'),
     path('deleteDoacao/<int:id>', deleteDoacao, name='deleteDoacao'),
-    path('cadastrar_voluntario/', cadastrar_voluntario, name='voluntario'),
+    path('cadastrar_Voluntario/', cadastrar_Voluntario, name='Voluntario'),
     path('api/', include(router.urls)),
 
 ]

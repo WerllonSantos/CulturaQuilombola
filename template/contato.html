@@ -20,6 +20,8 @@
      <div class="box-contato" style=" d-flex flex-column align-items-center">
             <form action="#" method="post">
                  {% csrf_token %}
+                    {{ ContatoForm }}
+
 
                 <div class="col-md-10">
                   <label for="name" class="form-label">Nome:</label>
@@ -32,8 +34,8 @@
                 </div>
 
                 <div class="col-md-10">
-                    <label for="celular" class="form-label">telefone:</label>
-                    <input type="tel" class="form-control"  id="telefone"">
+                    <label for="celular" class="form-label">celular:</label>
+                    <input type="tel" class="form-control"  id="celular">
                 </div>
 
                 <div class="col-md-10">
