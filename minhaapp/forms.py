@@ -1,21 +1,25 @@
 from django import forms
-from .models import voluntario, doar, contato
+from .models import Voluntario, Doacao, Contato
 
-class voluntarioForm(forms.ModelForm):
+class VoluntarioForm(forms.ModelForm):
     class Meta:
-        model = voluntario
-        fields = ['nome','sobrenome','Comogostaiadeserchamado',
-        'cpf','datadenascimento', 'genero', 'cep',
-        'estado', 'bairro', 'endereco','telefone','celular',
-                  'email']
+        model = Voluntario
+        fields = ['nome', 'sobrenome', 'cpf', 'data_nascimento', 'genero', 'telefone',
+        'celular', 'endereco', 'cidade','estado', 'cep',
+        'email', 'senha', 'concordou_termos_voluntariado',
+         'concordou_termos_imagem',]
 
-class doarForm(forms.ModelForm):
+class DoacaoForm(forms.ModelForm):
     class Meta:
-        model = doar
+        db_table = 'minhaapp_Doacao'
+        model = Doacao
         fields = ['nome','mensagemopcional', 'email','valor_doacao', 'data','contador_doacoes', ]
 
 
-class contatoForm(forms.ModelForm):
+class ContatoForm(forms.ModelForm):
     class Meta:
-        model = contato
-        fields = ['nome', 'celular', 'email','mensagemopcional']
+        db_table = 'minhaapp_Contato'
+        model = Contato
+        fields = ['nome', 'celular', 'email', 'mensagem']
+
+    mensagem = forms.CharField(widget=forms.Textarea, required=False, label='Mensagem Opcional')

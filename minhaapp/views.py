@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
-from .forms import voluntarioForm, contatoForm
+from .forms import VoluntarioForm, DoacaoForm, ContatoForm
 
 
 def pagina(request):
@@ -20,8 +19,8 @@ def eventos(request):
 def voluntario(request):
     return render(request, 'voluntario.html')
 
-def doar(request):
-    return render(request, 'doar.html')
+def Doacao(request):
+    return render(request, 'Doacao.html')
 
 def contato(request):
     return render(request, 'contato.html')
@@ -35,13 +34,13 @@ def createvoluntario(request):
         return redirect("voluntario")
     return render(request, 'voluntario.html', {'voluntarioForm':voluntarioForm})
 
-def createdoar(request):
-    doarForm = doarForm(request.POST or None)
-    if(doarForm.is_valid()):
-        doar = doarForm.save(commit=False)
-        doar.save()
-        return redirect("doar")
-    return render(request, 'doar.html', {'doarForm':doarForm})
+def createDoacao(request):
+    DoacaoForm = DoacaoForm(request.POST or None)
+    if(DoacaoForm.is_valid()):
+        Doacao = DoacaoForm.save(commit=False)
+        Doacao.save()
+        return redirect("Doacao")
+    return render(request, 'Doacao.html', {'DoacaoForm':DoacaoForm})
 
 def createcontato(request):
     form_contato = contatoForm(request.POST or None)
@@ -57,10 +56,10 @@ def readvoluntario(request, voluntario=None):
                   {'voluntario':voluntario})
 
 
-def readdoar(request):
-    doar = doar.objects.all()
-    return render(request, 'doar.html',
-                  {'doar':doar})
+def readDoacao(request):
+    Doacao = Doacao.objects.all()
+    return render(request, 'Doacao.html',
+                  {'Doacao':Doacao})
 
 
 def readcontato(request, contato=None):
@@ -79,15 +78,15 @@ def updatevoluntario(request, id):
     return render(request, 'voluntario.html', {'voluntarioForm':voluntarioForm})
 
 
-def updatedoar(request, id):
-    doar = get_object_or_404(doar, pk=id)
-    doarForm = doarForm(request.POST or None,
-                                instance=doar)
-    if(doarForm.is_valid()):
-        doar = doarForm.save(commit=False)
-        doar.save()
-        return redirect("doar")
-    return render(request, 'doar.html', {'doarForm':doarForm})
+def updateDoacao(request, id):
+    Doacao = get_object_or_404(Doacao, pk=id)
+    DoacaoForm = DoacaoForm(request.POST or None,
+                                instance=Doacao)
+    if(DoacaoForm.is_valid()):
+        Doacao = doarForm.save(commit=False)
+        Doacao.save()
+        return redirect("Doacao")
+    return render(request, 'Doacao.html', {'DoacaoForm':DoacaoForm})
 
 def updatecontato(request, id):
     contato = get_object_or_404(contato, pk=id)
@@ -104,13 +103,44 @@ def deletevoluntario(request, id):
     voluntario.delete()
     return redirect("voluntario")
 
-def deletedoar(request, id):
-    doar = get_object_or_404(doar, pk=id)
-    doar.delete()
-    return redirect("doar")
+def deleteDoacao(request, id):
+    Doacao = get_object_or_404(Doacao, pk=id)
+    Doacao.delete()
+    return redirect("Doacao")
 
 def deletecontato(request, id):
     contato = get_object_or_404(contato, pk=id)
     contato.delete()
     return redirect("contato")
 
+def cadastrar_voluntario(request):
+    if request.method == 'POST':
+        # Extrair dados do formulário
+        nome = request.POST['name']
+        sobrenome = request.POST['sobrenome']
+        cpf = request.POST['cpf']
+        data_nascimento = request.POST['dataNascimento']
+        genero = request.POST['genero']
+        telefone = request.POST['telefone']
+        celular = request.POST['celular']
+        endereco = request.POST['address']
+        cidade = request.POST['city']
+        estado = request.POST['state']
+        cep = request.POST['zip']
+        email = request.POST['email']
+        senha = request.POST['password']
+        concordou_termos_voluntariado = 'termosVoluntariado' in request.POST
+        concordou_termos_imagem = 'termosImagem' in request.POST
+
+        # Salvar no banco de dados
+        voluntario = Voluntario(nome=nome, sobrenome=sobrenome, cpf=cpf, data_nascimento=data_nascimento,
+                                genero=genero, telefone=telefone, celular=celular, endereco=endereco, cidade=cidade,
+                                estado=estado, cep=cep, email=email, senha=senha,
+                                concordou_termos_voluntariado=concordou_termos_voluntariado,
+                                concordou_termos_imagem=concordou_termos_imagem)
+        voluntario.save()
+
+        # Redirecionar após salvar
+        return redirect('pagina_sucesso')
+
+    return render(request, 'voluntario.html')

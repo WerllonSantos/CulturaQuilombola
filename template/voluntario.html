@@ -13,21 +13,19 @@
 
     <div class="box-voluntario"  style=" d-flex flex-column align-items-center">
 
-                <form action="/culturaquilombola/voluntario/" method="post">
-                  {% csrf_token %}
+        <form action="/culturaquilombola/voluntario/" method="post">
+                        {% csrf_token %}
+                        {{ VoluntarioForm }}
+
+
                   <div class="col-md-10">
-                    <label for="name" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="name">
+                   <label for="name" class="form-label">Nome:</label>
+                   <input type="text" class="form-control" id="name" name="name">
                   </div>
 
                   <div class="col-md-10">
                     <label for="sobrenome" class="form-label">sobrenome:</label>
                     <input type="text" class="form-control" id="sobrenome">
-                  </div>
-
-                  <div class="col-md-10">
-                    <label for="apelido" class="form-label">Como gostaria de ser chamado:</label>
-                    <input type="text" class="form-control" id="apelido">
                   </div>
 
                   <div class="col-md-10">
@@ -88,16 +86,17 @@
                     <input type="text" class="form-control" id="zip">
                   </div>
 
-
-                </form>
-            </div>
-
+          </form>
+        </div>
 
 
-            <div class="voluntario-acesso d-flex flex-column align-items-center">
+
+    <div class="voluntario-acesso d-flex flex-column align-items-center">
 
                      <h3> Acesso ao Cadastro:</h3>
-                <form action="#" method="post">
+        <form action="#" method="post">
+
+                     {% csrf_token %}
 
                     <div class="col-md-6">
                     <label for="email" class="form-label">E-mail:</label>
@@ -126,8 +125,7 @@
                     <div class="col-12">
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
-
-                 </form>
+        </form>
 
             </div>
 
