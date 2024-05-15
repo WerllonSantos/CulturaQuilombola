@@ -1,8 +1,7 @@
 from django.db import models
 
+
 # Create your models here.
-
-
 class Voluntario(models.Model):
     nome = models.CharField(max_length=40)
     rg = models.IntegerField(max_length=10)
@@ -25,6 +24,7 @@ class Voluntario(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Doacao(models.Model):
     nome = models.CharField(max_length=100)
     mensagemopcional = models.TextField()
@@ -36,6 +36,7 @@ class Doacao(models.Model):
     def __str__(self):
         return self.nome
 
+
 class Contato(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
@@ -45,4 +46,3 @@ class Contato(models.Model):
 
     def __str__(self):
         return self.nome
-
