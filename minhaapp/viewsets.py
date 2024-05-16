@@ -6,8 +6,8 @@ class VoluntarioViewSet(viewsets.ModelViewSet):
     model = Voluntario
     serializer_class = VoluntarioSerializer
     queryset = Voluntario.objects.all()
-    filter_fields = ('nome', 'sobrenome', 'apelido',
-        'cpf', 'data_nascimento', 'genero', 'telefone',
+    filter_fields = ('nome', 'sobrenome',
+        'cpf','rg','orgExp' 'data_nascimento', 'genero', 'telefone',
         'celular', 'endereco', 'cidade','estado', 'cep',
         'email', 'senha', 'concordou_termos_voluntariado',
          'concordou_termos_imagem',)

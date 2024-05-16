@@ -2,9 +2,9 @@ from django.db import models
 
 class Voluntario(models.Model):
     nome = models.CharField(max_length=40)
-    rg = models.IntegerField()
-    orgExp = models.CharField(max_length=10)
     cpf = models.CharField(max_length=11)
+    rg = models.CharField(max_length=8)
+    orgExp = models.CharField(max_length=10)
     cep = models.CharField(max_length=8)
     estado = models.CharField(max_length=20)
     bairro = models.CharField(max_length=20)

@@ -139,18 +139,17 @@ def deleteContato(request, id):
     return redirect("Contato")
 def cadastrar_Voluntario(request):
     if request.method == 'POST':
-        # Extrair dados do formulário
-        nome = request.POST['name']
-        sobrenome = request.POST['sobrenome']
-        cpf = request.POST['cpf']
-        genero = request.POST['genero']
-        telefone = request.POST['telefone']
-        celular = request.POST['celular']
-        endereco = request.POST['address']
-        estado = request.POST['state']
-        cep = request.POST['zip']
-        email = request.POST['email']
-        senha = request.POST['password']
+        nome = request.POST.get('name', '')
+        sobrenome = request.POST.get('sobrenome', '')
+        cpf = request.POST.get('cpf','')
+        genero = request.POST.get('genero', '')
+        telefone = request.POST.get('telefone', '')
+        celular = request.POST.get('celular', '')
+        endereco = request.POST.get('address', '')
+        estado = request.POST.get('state', '')
+        cep = request.POST.get('zip', '')
+        email = request.POST.get('email', '')
+        senha = request.POST.get('password', '')
         concordou_termos_voluntariado = 'termosVoluntariado' in request.POST
         concordou_termos_imagem = 'termosImagem' in request.POST
 
@@ -166,3 +165,26 @@ def cadastrar_Voluntario(request):
         return redirect('pagina_sucesso')
 
     return render(request, 'voluntario.html')
+
+def pagina_sucesso(request):
+    return render(request, 'pagina_sucesso.html')
+
+def cadastrar_voluntario(request):
+    if request.method == 'POST':
+        form = VoluntarioForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            return redirect('pagina_sucesso')
+    else:
+        form = VoluntarioForm()
+
+    return render(request, 'cadastrar_voluntario.html', {'form': form})
+
+def mostrar_voluntario(request, voluntario_id):
+    voluntario = Voluntario.objects.get(pk=voluntario_id)
+    return render(request, 'mostrar_voluntario.html', {'voluntario': voluntario})
+
+def lista_contatos(request):
+    contatos = Contato.objects.all()
+    return render(request, 'lista_contatos.html', {'contatos': contatos})

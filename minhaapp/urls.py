@@ -3,7 +3,7 @@ from rest_framework import routers
 from .viewsets import VoluntarioViewSet, DoacaoViewSet, ContatoViewSet
 from .views import pagina, sobre, equipe, noticias, eventos, Voluntario, Doacao, Contato, createVoluntario, \
     readVoluntario, updateVoluntario, deleteVoluntario, createDoacao, readDoacao, updateDoacao, deleteDoacao, readContato, \
-    createContato, updateContato, deleteContato, cadastrar_Voluntario
+    createContato, updateContato, deleteContato, cadastrar_Voluntario, pagina_sucesso, mostrar_voluntario, lista_contatos
 
 
 
@@ -35,6 +35,9 @@ urlpatterns = [
     path('deleteContato/<int:id>', deleteContato, name='deleteContato'),
     path('deleteDoacao/<int:id>', deleteDoacao, name='deleteDoacao'),
     path('cadastrar_Voluntario/', cadastrar_Voluntario, name='Voluntario'),
+    path('pagina_sucesso/', pagina_sucesso, name='pagina_sucesso'),
+    path('mostrar_voluntario/<int:voluntario_id>/', mostrar_voluntario, name='mostrar_voluntario'),
+    path('lista_contatos/', lista_contatos, name='lista_contatos'),
     path('api/', include(router.urls)),
 
 ]

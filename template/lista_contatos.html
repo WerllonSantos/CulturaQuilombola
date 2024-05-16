@@ -1,0 +1,17 @@
+<!-- lista_contatos.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contatos</title>
+</head>
+<body>
+    <h1>Lista de Contatos</h1>
+    <ul>
+        {% for contato in contatos %}
+            <li>{{ contato.nome }} - {{ contato.email }} - {{ contato.mensagemopcional }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -6,7 +6,7 @@ from .models import Voluntario, Doacao, Contato
 class VoluntarioForm(forms.ModelForm):
     class Meta:
         model = Voluntario
-        fields = ['nome', 'sobrenome', 'rg','genero', 'telefone',
+        fields = ['nome', 'sobrenome', 'cpf','rg','orgExp','genero', 'telefone',
                   'celular', 'endereco', 'estado', 'cep',
                   'email', 'senha', 'concordou_termos_voluntariado',
                   'concordou_termos_imagem']
@@ -14,7 +14,7 @@ class VoluntarioForm(forms.ModelForm):
 class VoluntarioForm(forms.ModelForm):
     class Meta:
         model = Voluntario
-        fields = ['nome', 'sobrenome', 'cpf','genero', 'telefone',
+        fields = ['nome', 'sobrenome', 'cpf','rg','orgExp','genero', 'telefone',
                   'celular', 'endereco',  'estado', 'cep',
                   'email', 'senha', 'concordou_termos_voluntariado',
                   'concordou_termos_imagem']
@@ -31,7 +31,7 @@ class VoluntarioForm(forms.ModelForm):
 
     class Meta:
         model = Voluntario
-        fields = ['nome', 'sobrenome', 'cpf', 'genero', 'telefone',
+        fields = ['nome', 'sobrenome', 'cpf', 'rg','orgExp','genero', 'telefone',
                   'celular', 'endereco',  'estado', 'cep',
                   'email', 'senha', 'concordou_termos_voluntariado',
                   'concordou_termos_imagem']
@@ -74,5 +74,5 @@ class ContatoForm(forms.ModelForm):
 
     def clean_celular(self):
         celular = self.cleaned_data['celular']
-        # Adicione validações personalizadas para o número de celular, se necessário
+
         return celular

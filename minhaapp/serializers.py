@@ -4,7 +4,7 @@ from rest_framework import serializers
 class VoluntarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Voluntario
-        fields = ['nome','rg','orgExp','cpf','cep',
+        fields = ['nome','cpf','rg','orgExp''cep',
         'estado','bairro','endereco','email','telefone',
                   'celular']
 
