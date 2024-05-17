@@ -43,22 +43,29 @@
      font-size: 20px;
      font-family: Arial, sans-serif;
      text-align: center;
-     margin-bottom: 10px;
+     margin-bottom: 10px auto;
 
 }
 
 .box p{
      font-size: 14px;
      font-family: Arial, sans-serif;
+     margin-bottom: 10px auto;
 
 }
 
-.box button{
+.box a{
      background-color: #4caf50;
      padding: 10px;
      border: none;
      border-radius: 4px;
      cursor: pointer;
+     text-decoration: none;
+     font-weight: bold;
+     color: #fff;
+     margin-left: 30px;
+     margin-bottom: 20px;
+
 
 }
 
@@ -198,7 +205,7 @@
 
 .box-noticia {
     background-color: #b3d9ff;
-    margin: 20px auto;
+    margin: 20px ;
     padding: 20px ;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -227,17 +234,13 @@
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
-        }
-
-.box-noticia button {
-     background-color: #4caf50;
-     color: #fff;
-     padding: 10px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     margin-top: 20px;
-
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+           cursor: pointer;
+           margin-top: 20px;
 }
 
 .container-eventos {
@@ -411,34 +414,34 @@
 }
 
 .contador-doacoes {
+    display: block;
+    margin: 20px auto;
     background-color: #b3d9ff;
-     display: flex;
-     flex-direction: column;
-      margin-bottom: 20px;
-     margin:10px;
-     padding: 20px;
-     border-radius: 8px;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    max-width: 1200px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 
-}
 
-.contador-doacoes p {
-    margin: 0;
 }
 
 
 .container-contato  {
-     max-width: 1200px;
-     margin: 20px;
-     padding: 20px;
-     background-color: #fff;
-     border-radius: 8px;
-     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 40px ;
+    background-color: #fff;
+    padding: 50px ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
 }
 
 .box-contato{
-     display: block;
-    margin: 20px auto;
+    display: block;
+    margin: 20px;
     background-color: #b3d9ff;
     padding: 20px;
     border-radius: 8px;
@@ -467,3 +470,4 @@
      margin-top: 20px;
 
 }
+

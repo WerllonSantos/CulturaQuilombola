@@ -6,7 +6,6 @@ from .views import pagina, sobre, equipe, noticias, eventos, Voluntario, Doacao,
     createContato, updateContato, deleteContato, cadastrar_Voluntario, pagina_sucesso, mostrar_voluntario, lista_contatos
 
 
-
 router = routers.DefaultRouter()
 router.register(r'Voluntario', VoluntarioViewSet, basename="Voluntario")
 router.register(r'Doacao', DoacaoViewSet, basename="Doacao")
