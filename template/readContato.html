@@ -1,0 +1,43 @@
+{% extends 'menu.html' %}
+{% load static %}
+{% block title %}Listar Paciente{% endblock %}
+{% block body %}
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h5>Nome</h5>
+    </div>
+    <div class="col">
+      <h5>E-mail:</h5>
+    </div>
+    <div class="col">
+      <h5>Valor da Doação:</h5>
+    </div>
+    <div class="col">
+      <h5>Forma de Pagamento:</h5>
+        <option value="pix">PIX</option>
+        <option value="boleto">Boleto</option>
+        <option value="cartao_credito">Cartão de Crédito</option>
+        <option value="cartao_debito">Cartão de Débito</option>
+    </div>
+    <div class="col">
+      <h5>Mensagem (opcional):</h5>
+    </div>
+    <div class="col">
+      <h5>Estado</h5>
+    </div>
+
+    <div class="col">
+      <a href="updatepaciente/{{ p.id }}">
+        <img src="{% static 'img/edit.svg' %}" height="35px">
+      </a>
+      <a href="deletepaciente/{{ p.id }}">
+        <img src="{% static 'img/remove.svg' %}" height="35px">
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
