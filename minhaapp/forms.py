@@ -1,7 +1,7 @@
 from django import forms
 from django.forms.widgets import DateInput
 from django.core.exceptions import ValidationError
-from .models import Voluntario, Doacao, Contato
+from .models import Voluntario, Doacao, Contato, InscricaoNewsletter
 
 class VoluntarioForm(forms.ModelForm):
     class Meta:
@@ -76,3 +76,12 @@ class ContatoForm(forms.ModelForm):
         celular = self.cleaned_data['celular']
 
         return celular
+
+
+class InscricaoNewsletterForm(forms.Form):
+    email = forms.EmailField(label='Email', max_length=254)
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        # Aqui você pode adicionar lógica de validação adicional
+        return email

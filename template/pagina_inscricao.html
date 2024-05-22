@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição na Newsletter</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Assine nossa Newsletter</h2>
+        <p>Receba as últimas notícias e atualizações diretamente na sua caixa de entrada.</p>
+        <form action="{% url 'inscrever_newsletter' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

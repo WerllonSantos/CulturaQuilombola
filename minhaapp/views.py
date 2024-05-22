@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import VoluntarioForm, DoacaoForm, ContatoForm
-from .models import Voluntario, Doacao, Contato
+from minhaapp.forms import VoluntarioForm, DoacaoForm, ContatoForm, InscricaoNewsletterForm
+from minhaapp.models import Voluntario, Doacao, Contato, InscricaoNewsletter
 
 
 def pagina(request):
@@ -188,3 +188,21 @@ def mostrar_voluntario(request, voluntario_id):
 def lista_contatos(request):
     contatos = Contato.objects.all()
     return render(request, 'lista_contatos.html', {'contatos': contatos})
+
+def pagina_inscricao(request):
+    form = InscricaoNewsletterForm()
+    return render(request, 'pagina_inscricao.html', {'form': form})
+
+def InscricaoNewsletter(request):
+    if request.method == 'POST':
+        form = InscricaoNewsletterForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            NewsletterInscricao.objects.create(email=email)  # Certifique-se de que `NewsletterInscricao` é o modelo
+            return redirect('pagina_sucesso_inscricao')
+    else:
+        form = InscricaoNewsletterForm()
+    return render(request, 'pagina_inscricao.html', {'form': form})
+
+def pagina_sucesso_inscricao(request):
+    return render(request, 'pagina_sucesso_inscricao.html')

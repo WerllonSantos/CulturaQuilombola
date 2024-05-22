@@ -81,7 +81,9 @@
           <div class="newsletter-container">
              <h2>Assine nossa Newsletter</h2>
              <p>Receba as últimas notícias e atualizações diretamente na sua caixa de entrada.</p>
-             <form action="/inscrever" method="post">
+             <form action="{'inscrever'}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
              <label for="email" class="form-label">Email:</label>
               <input type="text" class="form-control" id="email" name="email">
               <button type="submit" class="btn btn-primary">Enviar</button>

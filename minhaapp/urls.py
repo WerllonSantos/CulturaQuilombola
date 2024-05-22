@@ -1,9 +1,10 @@
 from django.urls import path, include
 from rest_framework import routers
 from .viewsets import VoluntarioViewSet, DoacaoViewSet, ContatoViewSet
-from .views import pagina, sobre, equipe, noticias, eventos, Voluntario, Doacao, Contato, createVoluntario, \
-    readVoluntario, updateVoluntario, deleteVoluntario, createDoacao, readDoacao, updateDoacao, deleteDoacao, readContato, \
-    createContato, updateContato, deleteContato, cadastrar_Voluntario, pagina_sucesso, mostrar_voluntario, lista_contatos
+from minhaapp.views import pagina, sobre, equipe, noticias, eventos, Voluntario, Doacao, Contato, createVoluntario, \
+    readVoluntario, updateVoluntario, deleteVoluntario, createDoacao, readDoacao, updateDoacao, deleteDoacao, \
+    readContato, createContato, updateContato, deleteContato, cadastrar_Voluntario, pagina_sucesso, mostrar_voluntario, \
+    lista_contatos, pagina_inscricao, InscricaoNewsletter, pagina_sucesso_inscricao
 
 
 router = routers.DefaultRouter()
@@ -37,6 +38,9 @@ urlpatterns = [
     path('pagina_sucesso/', pagina_sucesso, name='pagina_sucesso'),
     path('mostrar_voluntario/<int:voluntario_id>/', mostrar_voluntario, name='mostrar_voluntario'),
     path('lista_contatos/', lista_contatos, name='lista_contatos'),
+    path('', pagina_inscricao, name='pagina_inscricao'),
+    path('inscrever/', InscricaoNewsletter, name='inscrever_newsletter'),
+    path('sucesso-inscricao/', pagina_sucesso_inscricao, name='pagina_sucesso_inscricao'),
     path('api/', include(router.urls)),
 
 ]

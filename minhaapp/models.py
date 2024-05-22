@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+
 
 class Voluntario(models.Model):
     nome = models.CharField(max_length=40)
@@ -39,8 +42,33 @@ class Contato(models.Model):
     mensagemopcional = models.TextField()
     celular = models.CharField(max_length=20)
     data_envio = models.DateTimeField(auto_now_add=True)
-    autor = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome
+
+
+
+class InscricaoNewsletter(models.Model):
+    email = models.EmailField()
+    data_inscricao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+class Noticias(models.Model):
+    titulo = models.CharField(max_length=255)
+    conteudo = models.TextField()
+    data_publicacao = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.titulo
+
+class Eventos(models.Model):
+    titulo = models.CharField(max_length=255)
+    descricao = models.TextField()
+    data_evento = models.DateTimeField()
+
+    def __str__(self):
+        return self.titulo
+
 
